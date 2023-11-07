@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pibiti Project</title>
+
+  <!-- Link Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/styles.css">
+
+</head>
+
+<body>
+  
+  <!--Navbar-->
+  <nav class="navbar navbar-light">
+    <div class="container container-width">
+      <a class="navbar-brand" href="homepage.html">
+        <img src="assets/assets-image/assets-kurisuna-shop-logo.png" alt="assets-kurisuna-shop-logo" style="height: 60px; width: 180px;">
+      </a>
+      <div>
+      <a href="#koleksi-kami" class="custom-hyperlink">Collection</a>
+      <a href="#hubungi-kami" class="custom-hyperlink">Contact Person</a>
+      </div>
+    </div>
+  </nav>
+
+  <hr/>
+
+  <section style="background-color: rgb(215, 255, 215);">
+  <div class="container container-width">
+    <div class="row" style="padding: 30px 0 30px 0;">
+      <div class="col-6 align-items-center">
+        <div>
+          <h2 style="margin-bottom: 20px;">
+            Welcome To KuriSuna Hobby Shop
+          </h2>
+          <p style="margin-bottom: 20px;">
+            Our complete collection will make it easy for you to get the action figure of your dreams!
+          </p>
+          <button type="button" class="btn btn-dark" style="margin-bottom: 20px;">
+            <a href="#koleksi-kami" style="text-decoration: none;color: antiquewhite;">
+              Mulai Cari
+            </a>
+          </button>
+        </div>
+      </div>
+      <div class="col-6 justify-content-center">
+        <img src="assets/assets-image/assets-sabo.png" alt="assets-sabo" style="height: 330px;width: 400px;">
+      </div>
+    </div>
+  </div>
+ 
+       
+      </div>
+    </div>
+  </div>
+  </section>
+
+  <hr/>
+
+  <section style="background-color: rgb(197, 255, 251);">
+   <div class="container container-width">
+    <div class="row" style="padding: 30px 0 20px 0;">
+      <div class="d-flex align-items-center">
+        <h4>
+        Upcoming releases
+        </h4>
+      </div>
+    </div> 
+  </div>
+  </section>
+
+  <section style="background-color: rgb(197, 255, 251);">
+    <div id="slider" style="padding-top: 4px; padding-bottom: 10px;">
+      <input type="radio" name="slider" id="slide1" checked>
+      <input type="radio" name="slider" id="slide2">
+      <input type="radio" name="slider" id="slide3">
+      <input type="radio" name="slider" id="slide4">
+      <div id="slides">
+         <div id="overflow">
+            <div class="inner">
+               <div class="slide slide_1">
+                  <div class="slide-content">
+                     <h2>Arknights X Ichiban Kuji</h2>
+                  </div>
+               </div>
+               <div class="slide slide_2">
+                  <div class="slide-content">
+                     <h2>PVC 1/7 Elysia Herrscher of Human: Ego Ver.</h2>
+                  </div>
+               </div>
+               <div class="slide slide_3">
+                  <div class="slide-content">
+                     <h2>PVC 1/7 Riselia: Light Novel Ver.</h2>
+                  </div>
+               </div>
+               <div class="slide slide_4">
+                  <div class="slide-content">
+                    <h2>PVC 1/7 Kanade Tachibana: Wedding ver.</h2>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div id="controls">
+         <label for="slide1"></label>
+         <label for="slide2"></label>
+         <label for="slide3"></label>
+         <label for="slide4"></label>
+      </div>
+      <div id="bullets">
+         <label for="slide1"></label>
+         <label for="slide2"></label>
+         <label for="slide3"></label>
+         <label for="slide4"></label>
+      </div>
+   </div>
+   <script>
+    var autoplayInterval = 7500;
+    var autoplayTimer = null;
+    var autoplay = true;
+    var newIndex = 1;
+    
+    if (autoplay) {
+         autoplayTimer = setInterval(function() {
+         newIndex++;
+         navigateSlider();
+       }, autoplayInterval);
+    }
+    
+    function resetSlider() { 
+      clearInterval(autoplayTimer);
+    }
+    
+    function navigateSlider() { 
+      const slide1 = document.getElementById('slide1');
+      const slide2 = document.getElementById('slide2');
+      const slide3 = document.getElementById('slide3');
+      const slide4 = document.getElementById('slide4');
+      if (newIndex == 1) {
+        slide1.checked = true;
+      } else if (newIndex == 2) {
+        slide2.checked = true;
+      } else if (newIndex == 3) {
+        slide3.checked = true;
+      } else if (newIndex == 4) {
+        slide4.checked = true;
+        newIndex = 0;
+      }
+    }
+    </script>
+    
+  </section>
+  <hr/>
+
+  <section style="background-color: rgb(208, 231, 255);">
+    <div class="container container-width" id="koleksi-kami">
+      <div style="padding: 30px 0 30px 0;">
+        <h4>
+          Collection
+        </h4>
+        <p>
+          There are various collections of action figures that you can get here!
+        </p>
+        <select name="ex" id="ex" class="form-select custom-select" aria-label="Default select example" style="background-color: rgb(255, 255, 255);border: 1px solid black;">
+          <option selected>--None--</option>
+          <option value="1"><a href="kyou.id">Figma</a></option>
+          <option value="2">SHF</option>
+          <option value="3">Nendoroid</option>
+          <option value="4">Pop Up Parade</option>
+          <option value="5">Scaled Figure</option>
+        </select>
+        <div class="row">
+          <div class="col-4 mt-2">
+            <div class="card-nendo" style="width: 14rem; height: 392px; border: 3px solid black;opacity: 1;">
+              <img src="assets/assets-image/assets-gojo-nendo.jpg" class="card-img-top" alt="assets-gojo-nendo">
+              <div class="card-header">
+                <a class="custom-hyperlink" href=""><h6 class="card-header-text">Nendoroid Satoru Gojo - Jujutsu Kaisen</h6></a>
+              </div>
+              <div class="card-body">
+                <p class="card-text">IDR 500.000</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-4 mt-2">
+            <div class="card-nendo" style="width: 14rem; height: 392px; border: 3px solid black;opacity: 1;">
+              <img src="assets/assets-image/assets-toge-nendo.jpg" class="card-img-top" alt="assets-toge-nendo">
+              <div class="card-header">
+                <a class="custom-hyperlink" href=""><h6 class="card-header-text">Nendoroid Inumaki Toge - Jujutsu Kaisen</h6></a>
+              </div>
+              <div class="card-body">
+                <p class="card-text">IDR 500.000</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-4 mt-2">
+            <div class="card-nendo" style="width: 14rem; height: 392px; border: 3px solid black;opacity: 1;">
+              <img src="assets/assets-image/assets-nanami-nendo.jpg" class="card-img-top" alt="assets-nanami-nendo">
+              <div class="card-header">
+                <a class="custom-hyperlink" href=""><h6 class="card-header-text">Nendoroid Nanami Kento - Jujutsu Kaisen</h6></a>
+              </div>
+              <div class="card-body">
+                <p class="card-text">IDR 500.000</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-4 mt-2">
+            <div class="card-pop-up" style="width: 14rem; height: 392px; border: 3px solid black;opacity: 1;">
+              <img src="assets/assets-image/assets-rei-pop-up.jpg" class="card-img-top" alt="assets-rei-pop-up">
+              <div class="card-header">
+                <a class="custom-hyperlink" href=""><h6 class="card-header-text">Pop Up Parade Ayanami Rei - Evangelion</h6></a>
+              </div>
+              <div class="card-body">
+                <p class="card-text">IDR 1.500.000</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-4 mt-2">
+            <div class="card-pvc" style="width: 14rem; height: 392px; border: 3px solid black;opacity: 1;">
+              <img src="assets/assets-image/assets-noel-pvc.jpg" class="card-img-top" alt="assets-noel-pvc">
+              <div class="card-header">
+                <a class="custom-hyperlink" href=""><h6 class="card-header-text">PVC Figure 1/7 Swimsuit Shirogane Noel - Hololive</h6></a>
+              </div>
+              <div class="card-body">
+                <p class="card-text">IDR 2.350.000</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-4 mt-2">
+            <div class="card-figma" style="width: 14rem; height: 392px; border: 3px solid black;opacity: 1;">
+              <img src="assets/assets-image/assets-altria-lancer-figma.jpg" class="card-img-top" alt="assets-altria-lancer-figma">
+              <div class="card-header">
+                <a class="custom-hyperlink" href=""><h6 class="card-header-text">figma Lancer Altria Pendragon - FGO</h6></a>
+              </div>
+              <div class="card-body">
+                <p class="card-text">IDR 1.250.000</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-4 mt-2">
+            <div class="card-figma" style="width: 14rem; height: 392px; border: 3px solid black;opacity: 1;">
+              <img src="assets/assets-image/assets-mizuru-pvc.jpg" class="card-img-top" alt="assets-mizuru-pvc">
+              <div class="card-header">
+                <a class="custom-hyperlink" href=""><h6 class="card-header-text">PVC Figure 1/6 Mizuhara Chizuru - Santa Bikini Ver.</h6></a>
+              </div>
+              <div class="card-body">
+                <p class="card-text">IDR 3.250.000</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-4 mt-2">
+            <div class="card-figma" style="width: 14rem; height: 392px; border: 3px solid black;opacity: 1;">
+              <img src="assets/assets-image/assets-lumine-pvc.jpg" class="card-img-top" alt="assets-lumine-pvc">
+              <div class="card-header">
+                <a class="custom-hyperlink" href=""><h6 class="card-header-text">PVC Figure 1/7 Traveler / Lumine - Genshin Impact</h6></a>
+              </div>
+              <div class="card-body">
+                <p class="card-text">IDR 2.350.000</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-4 mt-2">
+            <div class="card-figma" style="width: 14rem; height: 392px; border: 3px solid black;opacity: 1;">
+              <img src="assets/assets-image/assets-nanami-pvc.jpg" class="card-img-top" alt="assets-nanami-pvc">
+              <div class="card-header">
+                <a class="custom-hyperlink" href=""><h6 class="card-header-text">PVC Figure Nanami Kento - Jujutsu Kaisen</h6></a>
+              </div>
+              <div class="card-body">
+                <p class="card-text">IDR 350.000</p>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+   </section>
+
+  <hr/>
+
+  <section style="background-color: rgb(224, 221, 241);">
+    <div class="container container-width">
+      <div class="row" style="padding: 30px 0 30px 0;">
+        <div class="col-6 align-items-center">
+          <div>
+            <h5 id="hubungi-kami">
+              Contact Person
+            </h5>
+            <p>
+              Have questions about our collection? You can contact the contact person below!
+            </p>
+            <a href=""><img src="assets/assets-image/assets-instagram-logo.png" alt="assets-instagram-logo" style="height: 50px; width: 50px; margin-right: 20px;"></a>
+            <a href=""><img src="assets/assets-image/assets-whatsapp-logo.png" alt="assets-whatsapp-logo" style="height: 50px; width: 50px;margin-right: 20px;"></a>
+          </div>
+        </div>
+        <div class="col-6 justify-content-center">
+          <div>
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Your Email</label>
+              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlTextarea1" class="form-label">What would you like to ask?</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <div>
+              <button type="button" class="btn btn-dark"><a href="" style="text-decoration: none;color: antiquewhite;">Kirim</a></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </section>
+  
+  <hr/>
+
+  <footer>
+    Copyright © 2023 Kurisuna Hobby Shop
+  </footer>
+
+</body>
+
+</html>
