@@ -7,18 +7,5 @@ async function getAllMeal() {
 }
 
 function displayMeal() {
-  console.log(getAllMeal());
-  //   getAllMeal().then((meals) => {
-  //     const mealContainer = document.querySelector("#meal-container");
-  //     meals.forEach((meal) => {
-  //       const mealDiv = document.createElement("div");
-  //       mealDiv.className = "meal";
-  //       mealDiv.innerHTML = `
-  //         <img src="${meal.strMealThumb}" alt="">
-  //         <h3>${meal.strMeal}</h3>
-  //         <button onclick="displayMealDetails('${meal.strMeal}')">Details</button>
-  //         `;
-  //       mealContainer.appendChild(mealDiv);
-  //     });
-  //   });
+  //
 }

@@ -1,26 +1,24 @@
-
-
-*{
-  font-family: 'Balsamiq Sans', sans-serif;
+* {
+  font-family: "Balsamiq Sans", sans-serif;
 }
 
-.custom-hyperlink{
+.custom-hyperlink {
   text-decoration: none;
   color: black;
   margin: 20px;
 }
 
-.container-width{
+.container-width {
   padding: 0px 250px 0px 250px;
 }
 
-hr{
-  border: 2px solid black; 
+hr {
+  border: 2px solid black;
   opacity: 1;
   margin: 0;
 }
 
-.custom-select{
+.custom-select {
   width: 200px;
 }
 
@@ -30,11 +28,11 @@ hr{
   max-width: 100%;
   text-align: center;
 }
-#slider input[type=radio] {
+#slider input[type="radio"] {
   display: none;
 }
 #slider label {
-  cursor:pointer;
+  cursor: pointer;
   text-decoration: none;
 }
 #slides {
@@ -61,14 +59,14 @@ hr{
   margin-left: -300%;
 }
 #slides .inner {
-  transition: margin-left 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+  transition: margin-left 800ms cubic-bezier(0.77, 0, 0.175, 1);
   width: 400%;
   line-height: 0;
   height: 300px;
 }
 #slides .slide {
   width: 25%;
-  float:left;
+  float: left;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -80,7 +78,6 @@ hr{
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  
 }
 #slides .slide_2 {
   background-image: url(assets-image/assets-elysia-pvc.jpg);
@@ -112,7 +109,7 @@ hr{
   display: none;
   width: 50px;
   height: 50px;
-  opacity: .4;
+  opacity: 0.4;
 }
 #controls label:hover {
   opacity: 1;
@@ -122,7 +119,7 @@ hr{
 #slide3:checked ~ #controls label:nth-child(4),
 #slide4:checked ~ #controls label:nth-child(1) {
   background: url(assets-image/assets-right-arrow.png) no-repeat;
-  float:right;
+  float: right;
   margin: 0 -50px 0 0;
   display: block;
 }
@@ -131,7 +128,7 @@ hr{
 #slide3:checked ~ #controls label:nth-last-child(3),
 #slide4:checked ~ #controls label:nth-last-child(2) {
   background: url(assets-image/assets-left-arrow.png) no-repeat;
-  float:left;
+  float: left;
   margin: 0 0 0 -50px;
   display: block;
 }
@@ -143,7 +140,7 @@ hr{
   display: inline-block;
   width: 10px;
   height: 10px;
-  border-radius:100%;
+  border-radius: 100%;
   background: #ccc;
   margin: 0 10px;
 }
@@ -162,10 +159,10 @@ hr{
   #slide2:checked ~ #controls label:nth-last-child(3),
   #slide3:checked ~ #controls label:nth-last-child(4),
   #slide4:checked ~ #controls label:nth-last-child(1) {
-     margin: 0;
+    margin: 0;
   }
   #slides {
-     max-width: calc(100% - 140px);
-     margin: 0 auto;
+    max-width: calc(100% - 140px);
+    margin: 0 auto;
   }
 }
